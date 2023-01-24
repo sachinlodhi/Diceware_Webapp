@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password_Generator</title>  
+  <!-- <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"> -->
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
+
+</head>
+<body>
+  <div class="heading">
+    <div class="title">
+      <h1>Generate Your Passphrase...</h1>
+    </div>
+  </div>
+  <div class="dropdown">
+    <div class="form1">
+      <form>
+        <label for="languages">Choose a Language:</label><br>
+        <select id="languages" name="languages">
+          <option value="english" selected="selected">English</option>
+          <option value="french">French(français)</option>
+          <option value="german">German(deutsch)</option>
+          <option value="hebrew">Hebrew(עִברִית)</option>
+          <option value="latin">Italian(Italiano)</option>
+          <option value="russian">Russian(Русский)</option>
+          <option value="spanish">Spanish(Español)</option>
+          
+        </select>
+      </form>
+    </div>
+    <div class="form2">
+      <form>
+        <label for="lan">Choose a Number:</label><br>
+        <input class="str" id="num" value = "5" type="number" placeholder="0" min="1">   
+        <input class="select" id="submit" type="submit" value="Select" >       
+      </form>
+    </div> 
+    </div> 
+  
+  
+    <div id="container">
+      <div id="cube" class="grab">
+        <div class="facet top">
+          <div class="dot"></div>
+        </div>
+        <div class="facet front">
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="facet left">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="facet right">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="facet back">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="facet bottom">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+    </div>
+  <div class="pass">
+    <div id="data-table"></div>
+  </div>
+
+  
+
+
+  <div class="table"></div>
+  
+
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+  <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.3/xlsx.core.min.js"></script>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>  
+  <script type="module" src="script.js"></script>
+  <script type ="module" src="./node_modules/jquery/dist/jquery.js"></script>
+  <script type ="module" src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  <script type ="module" src="./node_modules/xlsx/xlsx.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.full.min.js"></script>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>
