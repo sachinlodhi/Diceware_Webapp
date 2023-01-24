@@ -7,6 +7,7 @@ body{
     background-size: 600% 100%;
     animation: gradient 10s linear infinite;
     animation-direction: alternate;
+    height: 100vh;
 }
 @keyframes gradient {
   0% {background-position: 0%}
@@ -131,17 +132,7 @@ input:focus, select:focus{
     animation: roll 0.5;
 }
 
-body {
-  margin: 0;
-}
 
-#container {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  perspective: 400px;
-}
 
 #cube {
   margin: auto;
@@ -316,4 +307,3 @@ body {
     transform: rotateY(360deg) rotateX(0) rotateZ(360deg);
   }
 }
-
