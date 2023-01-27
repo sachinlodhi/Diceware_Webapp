@@ -55,6 +55,9 @@ wordListLoader("latin").then(data => (listLatin = data));
 let listHING ={}
 wordListLoader("hinglish").then(data => (listHING = data));
 
+let listDEV = {}
+wordListLoader("devanagari").then(data => (listDEV = data));
+
 
 
 
@@ -107,10 +110,18 @@ async function display(lang, len) // take this from frontend
 
     if(lang == "hinglish")
     {
-      console.log("Selected hinglish");
+      // console.log("Selected hinglish");
     selectedLang = listHING;
-    console.log(listHING);
+    // console.log(listHING);
     }
+
+    if(lang == "devanagari")
+    {
+      // console.log("Selected hinglish");
+    selectedLang = listDEV;
+    // console.log(listHING);
+    }
+
 
 
     var passString = ""; // Final string
@@ -138,7 +149,7 @@ return passString;
 
 
 var i = 0;
-var speed = 100;
+var speed = 60;
 var passString =""
   function typeWriter() {
 
