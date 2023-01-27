@@ -8,6 +8,7 @@ body{
   animation: gradient 10s linear infinite;
   animation-direction: alternate;
   height: 100vh;
+  /* color: rgb(212, 192, 192); */
   
 }
 @keyframes gradient {
