@@ -4,68 +4,66 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diceware Passphrase Generator</title>  
-  <!-- <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"> -->
-  <link rel="stylesheet" href="./style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js"></script>
-<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico">
+  <title>Diceware Passphrase Generator</title>    
+  <link rel="shortcut icon" href="./images/favicon.ico">
+  <link rel="stylesheet" href="./style.css">  
 </head>
 <body>
-  <div class="heading">
-    <div class="title">
-      <h1>Diceware Passphrase Generator</h1>
+<div class="full-page">
+ 
+    <div class="heading">
+      <div class="title">
+        <h1>Diceware Passphrase Generator</h1>
+      </div>
     </div>
+    <div class="dropdown">
+      <div class="form1">
+        <form>
+          <label for="languages">Choose a Language:</label><br>
+          <select id="languages" name="languages" class="abc">
+            <option value="english" selected="selected">English</option>
+            <option value="french">French(français)</option>
+            <option value="german">German(deutsch)</option>
+            <option value="hebrew">Hebrew(עִברִית)</option>
+            <option value="latin">Italian(Italiano)</option>
+            <option value="russian">Russian(Русский)</option>
+            <option value="spanish">Spanish(Español)</option>
+            
+          </select>
+        </form>
+      </div>
+      <div class="form2">
+        <form>
+          <label for="lan">Choose a Number:</label><br>
+          <input class="str" id="num" type="number" placeholder="0" min="1" autocomplete="off">   
+          <input class="select" id="submit" type="submit" value="Generate" >       
+        </form>
+      </div> 
   </div>
-  <div class="dropdown">
-    <div class="form1">
-      <form>
-        <label for="languages">Choose a Language:</label><br>
-        <select id="languages" name="languages">
-          <option value="english" selected="selected">English</option>
-          <option value="french">French(français)</option>
-          <option value="german">German(deutsch)</option>
-          <option value="hebrew">Hebrew(עִברִית)</option>
-          <option value="latin">Italian(Italiano)</option>
-          <option value="russian">Russian(Русский)</option>
-          <option value="spanish">Spanish(Español)</option>
-          
-        </select>
-      </form>
-    </div>
-    <div class="form2">
-      <form>
-        <label for="lan">Choose a Number:</label><br>
-        <input class="str" id="num" value="5"  type="number" placeholder="0" min="1">   
-        <input class="select" id="submit" type="submit" value="Generate" >       
-      </form>
-    </div> 
-    </div> 
-
-  <!-- <div class="pass">
-    <div id="data-table"></div>
-  </div> -->
-
   <div class="typewriter">
-    <h1>Generated Passphrase: </h1>
+    <h2>Generated Passphrase: </h2>
     <h1 id = "finalPass"></h1>
   </div>
 
-  <footer>
-    <div class="footer-container">
-    <p> 🎲Diceware Passphrase Generator🎲</p>
-      <p>Developed by: <a href ="https://www.linkedin.com/in/sachinlodhi/"> Sachin</a> and <a href="https://www.linkedin.com/in/palak-gontiya-72748725a/"> Palak</a></p>    
-    </div>
-  </footer>
+  
+    </div> 
+
   
 
   
+
+
+
+    <footer>
+      <div class="footer-container">
+      <p> 🎲Diceware Passphrase Generator🎲</p>
+        <p>Developed by: <a href ="https://www.linkedin.com/in/sachinlodhi/"> Sachin</a> and <a href="https://www.linkedin.com/in/palak-gontiya-72748725a/"> Palak</a></p>    
+      </div>
+    </footer>
+    
   
-
-
+    
  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.full.min.js"></script>
   <script type="module" src="./script.js"></script>
 </body>
 

@@ -1,41 +1,57 @@
 *{
   padding: 0;
   margin: 0;
+ 
 }
 body{
-  background-image: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
-  background-size: 600% 100%;
-  animation: gradient 10s linear infinite;
-  animation-direction: alternate;
+  /* background-image: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
+  background-size: 600% 100%; */
+  /* animation: gradient 10s linear infinite;
+  animation-direction: alternate; */
   height: 100vh;
+  width: 100vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   /* color: rgb(212, 192, 192); */
   
 }
-@keyframes gradient {
+/* @keyframes gradient {
 0% {background-position: 0%}
 100% {background-position: 100%}
+} */
+.full-page
+{
+  height: 100%;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(/images/wallpaper.jpg);
+	background-position: center;
+	background-size: cover;
+	position: absolute;
 }
+
 
 .heading{   
   display: flex;   
   width: 100%;  
   justify-content: center;   
-  margin-top: 5px;
+  margin-top: 10px;
   font-size: 25px;  
+  
   
 }
 .title{
   width: 800px;
   display: flex;
-  border: 1px solid white;
+  /* border: 1px solid white; */
   border-radius: 20px;
   justify-content: center; 
   align-items: center;
+  background:rgba(0,0,0,0.3);
+  
   
 }
 .title h1{
   margin: 10px 0;
-  color: white;
+  color: rgb(212, 192, 192);
 }
 .dropdown{
   /* display: grid;   
@@ -51,31 +67,30 @@ body{
 .form1 { 
   margin-right: 10px;
   
+  
 }
 .form2{      
-  margin-left: 10px;     
+  margin-left: 10px; 
+  display: flex;    
 }
   
-.dropdown ul{        
-  width: 300px;
-  background: transparent;  
-  border: 1px solid white;
-}
+
 
 .dropdown label{
   font-size: 25px;
-  color: white; 
+  color: rgb(212, 192, 192);
  
 }
 .dropdown #languages, .str{
   width: 300px;
   font-size: 25px;
-  padding: 10px;
+  padding: 15px;
   margin-top: 5px; 
   border-radius: 20px;
-  background: transparent;
-  border: 1px solid white;
-  color: white;
+  background: rgba(0,0,0,0.3);
+  border: none;
+  color: rgb(212, 192, 192);
+  
 }
 .dropdown select option{
      color: black;
@@ -85,14 +100,15 @@ body{
   width: 120px;
   font-size: 22px;
   margin-left: 20px;
-  padding: 14px;    
+  padding: 18px;    
   border-radius: 20px;
   background: transparent;
-  border: 1px solid white;
-  color: white;
+  border: none;
+  color: rgb(212, 192, 192);
   cursor: pointer;
-  background: #21d4fd;
-  background-image: linear-gradient(19deg, #b721ff 0%, #21d4fd 100%);
+  background: rgba(0,0,0,0.3);
+  transition: 0.5s ease-in-out;
+  /* background-image: linear-gradient(19deg, #b721ff 0%, #21d4fd 100%); */
   
 }
 input:focus, select:focus{
@@ -100,8 +116,10 @@ input:focus, select:focus{
 }
 
 .select:hover{  
-  font-weight: bold;
-  border: 1px solid white;
+  font-weight: bolder;
+  background: rgb(212, 192, 192);
+  color: rgb(24, 2, 24);
+ 
 }
 
 /* .pass{
@@ -120,12 +138,46 @@ input:focus, select:focus{
 display: flex;
 justify-content: center;
 margin-top: 50px;
-color: #000;
+color: rgb(212, 192, 192);
 font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 flex-direction: column;
 align-items: center;
+text-align: center;
+/* background:rgba(0,0,0,0.3); */
+
+}
+#finalPass{
+  /* background:rgba(0,0,0,0.3); */
+  border-radius: 5px;
+  /* height: 50px; */
+  margin: 30px 30px;
+  padding: 10px 10px;
 }
 
+
+
+/* @media screen and (max-width: 320px){
+  .heading{
+    font-size: 10px;
+  }
+  .dropdown {
+    flex-direction: column;
+    margin-top: 10px;       
+
+  }
+  .abc{
+    font-size: 10ptx;
+  }
+  label{
+    font-size: 10px;
+  }
+  .str, .select{
+    font-size: 10px;
+    width: 50%;
+  }
+  
+ 
+} */
 .footer-container {
   /* background: transparent;
   color: #ffffff;
@@ -137,6 +189,7 @@ align-items: center;
    width:100%;
    height:60px;   /* Height of the footer */
    text-align: center;
+   color: azure;
   
 }
 
