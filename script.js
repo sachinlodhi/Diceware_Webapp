@@ -2,7 +2,7 @@ const submit = document.getElementById("submit");
 // const p = document.getElementById("data-table");
 const language = document.getElementById("languages");
 const number = document.getElementById("num");
-const passphrase = document.getElementById("data-table");
+// const passphrase = document.querySelector(".typewriter")
 const box = document.querySelectorAll("img");
 
 // var all={};
@@ -22,7 +22,7 @@ await fetch ("./file/" + langOption + ".txt")
 
 result = Object.fromEntries(all.trim().split('\n').map(s => s.split(' ')))
 
-return result
+return result;
 
 }
 
@@ -126,12 +126,47 @@ return passString;
 } 
 
 
+
+var i = 0;
+var speed = 100;
+var passString =""
+  function typeWriter() {
+
+    // console.log(passString.length);
+
+    
+    if (i < passString.length) {
+      document.getElementById("finalPass").innerHTML += passString.charAt(i);
+      i++;
+    //   console.log(i);
+      setTimeout(typeWriter, speed);
+    }
+  }
+
+
+
+
  submit.addEventListener("click", ()=>{
     
     event.preventDefault();
+    document.getElementById("finalPass").innerHTML = "";
+    i = 0;
     display(language.value, number.value).then(function(data){
-    console.log(data);
-    passphrase.innerHTML = data});
+    // console.log(passphrase.children[0]);
+    // passphrase.children[0].innerHTML = data;
+    passString = data;
+    console.log("In passString:" , passString);
+    typeWriter();
+
+
+
+
+
+
+
+
+
+});
    
     
  });

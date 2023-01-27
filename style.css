@@ -1,113 +1,127 @@
 *{
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 body{
-    background-image: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
-    background-size: 600% 100%;
-    animation: gradient 10s linear infinite;
-    animation-direction: alternate;
-    height: 100vh;
+  background-image: linear-gradient(45deg,#F17C58, #E94584, #24AADB , #27DBB1,#FFDC18, #FF3706);
+  background-size: 600% 100%;
+  animation: gradient 10s linear infinite;
+  animation-direction: alternate;
+  height: 100vh;
+  
 }
 @keyframes gradient {
-  0% {background-position: 0%}
-  100% {background-position: 100%}
+0% {background-position: 0%}
+100% {background-position: 100%}
 }
 
 .heading{   
-    display: flex;   
-    width: 100%;  
-    justify-content: center;   
-    margin-top: 5px;
-    font-size: 25px;  
-    
+  display: flex;   
+  width: 100%;  
+  justify-content: center;   
+  margin-top: 5px;
+  font-size: 25px;  
+  
 }
 .title{
-    width: 800px;
-    display: flex;
-    border: 1px solid white;
-    border-radius: 20px;
-    justify-content: center; 
-    align-items: center;
-    
+  width: 800px;
+  display: flex;
+  border: 1px solid white;
+  border-radius: 20px;
+  justify-content: center; 
+  align-items: center;
+  
 }
 .title h1{
-    margin: 10px 0;
-    color: white;
+  margin: 10px 0;
+  color: white;
 }
 .dropdown{
-    /* display: grid;   
-    grid-template-columns: 1fr 1fr; */
-    width: 100%;  
-    /* border: 1px solid black; */
-    margin-top: 70px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center ;     
-    
+  /* display: grid;   
+  grid-template-columns: 1fr 1fr; */
+  width: 100%;  
+  /* border: 1px solid black; */
+  margin-top: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center ;     
+  
 }
 .form1 { 
-    margin-right: 10px;
-    
+  margin-right: 10px;
+  
 }
 .form2{      
-    margin-left: 10px;     
+  margin-left: 10px;     
 }
-    
+  
 .dropdown ul{        
-    width: 300px;
-    background: transparent;  
-    border: 1px solid white;
+  width: 300px;
+  background: transparent;  
+  border: 1px solid white;
 }
 
 .dropdown label{
-    font-size: 25px;
-    color: white; 
-   
+  font-size: 25px;
+  color: white; 
+ 
 }
 .dropdown #languages, .str{
-    width: 300px;
-    font-size: 25px;
-    padding: 10px;
-    margin-top: 5px; 
-    border-radius: 20px;
-    background: transparent;
-    border: 1px solid white;
-    color: white;
+  width: 300px;
+  font-size: 25px;
+  padding: 10px;
+  margin-top: 5px; 
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
 }
 .dropdown select option{
-       color: black;
+     color: black;
 
 }
 .select{
-    width: 100px;
-    font-size: 22px;
-    margin-left: 20px;
-    padding: 14px;    
-    border-radius: 20px;
-    background: transparent;
-    border: 1px solid white;
-    color: white;
-    cursor: pointer;
-    background: #21d4fd;
-    background-image: linear-gradient(19deg, #b721ff 0%, #21d4fd 100%);
-    
+  width: 100px;
+  font-size: 22px;
+  margin-left: 20px;
+  padding: 14px;    
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  background: #21d4fd;
+  background-image: linear-gradient(19deg, #b721ff 0%, #21d4fd 100%);
+  
 }
 input:focus, select:focus{
-    outline: none;
+  outline: none;
 }
 
 .select:hover{  
-    font-weight: bold;
-    border: 1px solid white;
+  font-weight: bold;
+  border: 1px solid white;
 }
 
-.pass{
-    display: flex;
-    justify-content: center ;
-    margin-top: 30px;
+/* .pass{
+  display: flex;
+  justify-content: center ;
+  margin-top: 30px;
+} */
+
+/* #data-table{
+  color: black;
+  font-size: 40px;
+  
+} */
+.typewriter
+{
+display: flex;
+justify-content: center;
+margin-top: 50px;
+color: #000;
+font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+flex-direction: column;
+align-items: center;
 }
-#data-table{
-    color: white;
-    font-size: 40px;
-}
+
