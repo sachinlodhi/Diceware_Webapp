@@ -11,6 +11,7 @@ const box = document.querySelectorAll("img");
 /// Function to load the wordlist in the begining 
 async function wordListLoader(langOption)
 { 
+  // console.log(langOption);
     let result = {}
     var all = ''
 await fetch ("./file/" + langOption + ".txt")
@@ -51,7 +52,8 @@ let listLatin = {}
 wordListLoader("latin").then(data => (listLatin = data));
 
 
-
+let listHING ={}
+wordListLoader("hinglish").then(data => (listHING = data));
 
 
 
@@ -60,7 +62,7 @@ wordListLoader("latin").then(data => (listLatin = data));
 
 async function display(lang, len) // take this from frontend
 {  
-    console.log(lang);
+    // console.log(lang);
     let selectedLang = {}
     // //  selected english for operation
     if(lang == "english")
@@ -102,6 +104,14 @@ async function display(lang, len) // take this from frontend
     selectedLang = listRU;
     // console.log(selectedLang);
     }
+
+    if(lang == "hinglish")
+    {
+      console.log("Selected hinglish");
+    selectedLang = listHING;
+    console.log(listHING);
+    }
+
 
     var passString = ""; // Final string
     var t = 0; // To generate digits [1-6]]
