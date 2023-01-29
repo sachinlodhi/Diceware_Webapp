@@ -27,7 +27,7 @@
             <option value="german">German(deutsch)</option>
             <option value="hebrew">Hebrew(עִברִית)</option>
             <option value="hinglish">Hinglish(Indian)</option>
-            <option value="latin">Italian(Italiano)</option>
+            <option value="latin">Modern Latin</option>
             <option value="russian">Russian(Русский)</option>
             <option value="spanish">Spanish(Español)</option>
             
@@ -37,7 +37,7 @@
       <div class="form2">
         <form>
           <label for="lan">Choose a Number:</label><br>
-          <input class="str" id="num" type="number"  min="1" autocomplete="off" required>   
+          <input class="str" id="num" type="number"  min="1" autocomplete="off" required value="5">   
           <input class="select" id="submit" type="submit" value="Generate" >       
         </form>
       </div> 
@@ -46,6 +46,16 @@
     <h2>Generated Passphrase: </h2>
     <h1 id = "finalPass"></h1>
   </div>
+
+  <div class="entropy">
+    <h2>Entropy: </h2>
+    <h1 id = "finalEntropy"></h1>
+  </div>
+  <div class="combo">
+    <h2>Possible Combinations: </h2>
+    <h1 id = "finalCombo"></h1>
+  </div>
+  
 
   
     </div> 
