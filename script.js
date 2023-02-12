@@ -471,12 +471,53 @@ if (langVal == "punjabi")
 // console.log("Special char : ", specialSymbol.length);
 console.log("space : ", space);
 console.log(string)
-let possibleCombo = space ** string.length;
+// let possibleCombo = space ** string.length;
 // console.log("Possible Comobo : ", possibleCombo);
-let entropy = Math.log2(possibleCombo);
-entropy = Math.ceil(entropy)
-entropyVal = entropy.toString() + " bits"; 
-possibleCombinations = possibleCombo.toString() + " ";
+// let entropy = Math.log2(possibleCombo);
+// entropy = Math.ceil(entropy)
+// entropyVal = entropy.toString() + " bits"; 
+// possibleCombinations = possibleCombo.toString() + " ";
+
+
+// let jkl = space ** string.length;
+// console.log("Possible Comobo : ", jkl);
+// let mno = Math.log2(jkl);
+// console.log("MNO", mno);
+
+
+
+let possibleCombo = BigInt(space) ** BigInt(string.length);
+// console.log("possible combo : ", Math.log2(Number(possibleCombo,toString())));
+// let entropy = Math.log2(Number(possibleCombo.toString()));
+
+let possibleComboNumber = Number(possibleCombo.toString());
+let entropy = isFinite(possibleComboNumber) && possibleComboNumber > 0 ? Math.log2(possibleComboNumber) : 0;
+entropy = isFinite(entropy) ? Math.round(entropy) : 0; // Math.round() can take maximum number i.e. 1.79e309 that would result in 1024 i.e. infinity and hence entropy = 0
+if (entropy==0){
+  entropyVal = ">1024" + " bits";  // precise value of entropy >1024 cuz it cant be calculated beyond the upperbound i.e. 1.79e309
+}
+else{
+entropyVal = BigInt(entropy).toString() + " bits";
+}
+possibleCombinations = possibleCombo.toString();
+possibleCombinations = possibleCombinations[0] + "." +possibleCombinations.slice(1,5) + "e" + "+" + (possibleCombinations.length-1).toString();
+console.log(possibleCombinations);
+
+
+
+
+// console.log("entropy", entropy);
+// entropy = isFinite(entropy) && Number.isInteger(entropy) ? Math.ceil(entropy) : 0;
+// console.log("entropy", entropy);
+// entropyVal = BigInt(entropy).toString() + " bits";
+// possibleCombinations = possibleCombo.toString() + " ";
+// possibleCombinations = possibleCombinations[0] + "." +possibleCombinations.slice(1,5) + "e" + "+" + (possibleCombinations.length-1).toString();
+// console.log(possibleCombinations);
+
+
+
+
+
 j = 0;
 k = 0;
 // console.log("Entropy is", entropyVal);
