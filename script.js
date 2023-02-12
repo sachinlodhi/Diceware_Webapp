@@ -52,6 +52,9 @@ wordListLoader("chinese").then(data => (listCH = data));
 let listEL = {}
 wordListLoader("greek").then(data => (listEL = data));
 
+let listPB = {}
+wordListLoader("punjabi").then(data => (listPB = data));
+
 
 async function display(lang, len) // take this from frontend
 {  
@@ -117,6 +120,13 @@ async function display(lang, len) // take this from frontend
     {
       // console.log("Selected hinglish");
     selectedLang = listEL;
+    // console.log(listHING);
+    }
+
+    if(lang == "punjabi")
+    {
+      // console.log("Selected hinglish");
+    selectedLang = listPB;
     // console.log(listHING);
     }
     var passString = ""; // Final string
@@ -422,9 +432,45 @@ if (langVal == "greek")
 
 }
 
+if (langVal == "punjabi")
+{
+// this block has english+greek letters
+
+  
+  
+  let punjabiCharacter = /[\u0A00-\u0A7F]/ // all punjabi charcaters -> 48
+  let numberRegex = /[0-9]+/
+  let punjabiNumberRegex = /[\u0A66-\u0A6F]/ // punjabi numbers -> "੦", "੧", "੨", "੩", "੪", "੫", "੬", "੭", "੮", and "੯"
+
+  lowers = punjabiCharacter.test(string);
+  digits = numberRegex.test(string);
+  let punjabiNums = punjabiNumberRegex.test(string);
+
+  specials = specialSymbol.test(string);
+
+  if(digits)
+  {
+    space+=10;
+  }
+  if(specials)
+  {
+    space+=32;
+  }
+  if(lowers)
+  {
+    space+=48; // gurmukhi has 48 alphabets
+  }
+  if(punjabiNums)
+  {
+    space+=10;
+  }
+
+}
+
 //Calculation
 // console.log("Special char : ", specialSymbol.length);
 console.log("space : ", space);
+console.log(string)
 let possibleCombo = space ** string.length;
 // console.log("Possible Comobo : ", possibleCombo);
 let entropy = Math.log2(possibleCombo);
